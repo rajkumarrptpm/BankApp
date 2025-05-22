@@ -12,18 +12,18 @@
 
             </div>
             <div class="card-body">
-                <form (ngSubmit)="login()">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" [(ngModel)]="userAcNo" name="userAccNum" [placeholder]="accNo" id="login_accno" required>
+                        <input type="text" class="form-control" formControlName="userAcNo" name="userAccNum" [placeholder]="accNo" id="login_accno" required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" [(ngModel)]="userPswd"  name="userpswrd"
+                        <input type="password" class="form-control" formControlName="userPswd"  name="userpswrd"
                             placeholder="password" id="login_password" required>
                     </div>
                     <div class="form-group">

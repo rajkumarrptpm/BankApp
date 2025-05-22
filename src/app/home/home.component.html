@@ -1,1 +1,87 @@
-<p>home works!</p>
+<nav>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a class="navbar-brand" style="color:rgb(85, 98, 237);" href="#">HSBC Bank </a>
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-1">
+    <div class="container">
+        <div class="section">
+            <div class="section-1">
+                <div class="form-model">
+                    <div class="form-title">
+                        <div></div>
+                        <h5>Cash Deposit</h5>
+                        <a href=""style="padding:5px 10px;background-color:white;">close</a>
+                    </div>
+                    <div class="form-body">
+                        <form (ngSubmit)="deposit()">
+                            <div class="form-group">
+                                <label for="depAcNo">Account Number</label>
+                                <input type="text" class="form-control" [(ngModel)]="dpstAcNo" name="depAcNo" placeholder="Enter Account Number" id="depAcNo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="deposit_amount">amount</label>
+                                <input type="text" class="form-control" name="depAmnt" [(ngModel)]="dpstAmnt" placeholder="Enter Amount" id="depAmnt" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Upi_pin">UPI Pin</label>
+                                <input type="text" class="form-control" placeholder="Enter UPI Pin" name="dpstUpiPin" [(ngModel)]="dpstUpiPin" id="Upi_pin" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-secondary mt-2" value="deposit" style="width:25% ; border: 1px solid black;">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="section-1">
+                <div class="form-model">
+                    <div class="form-title">
+                        <div></div>
+                        <h5>Cash Withdraw</h5>
+                        <a href=""style="padding:5px 10px;background-color:white;">close</a>
+                    </div>
+                    <div class="form-body">
+                        <form (ngSubmit)="withdraw()">
+                            <div class="form-group">
+                                <label for="wAcNo">Account Number</label>
+                                <input type="text" class="form-control" [(ngModel)]="wtrwAcNo" name="wtrwAcNo" placeholder="Enter Account Number" id="wAcNo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="wAmnt">Amount</label>
+                                <input type="text" class="form-control" [(ngModel)]="wtrwAmnt" name="wAmnt" placeholder="Enter Amount" id="wAmnt" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="upi_pin">UPI Pin</label>
+                                <input type="password" class="form-control" [(ngModel)]="wtrwUpiPin" name="wtrwUpiPin" placeholder="Enter UPI Pin" id="upi_pin" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Transfer"  class="btn btn-secondary mt-2" style="width:25% ; border: 1px solid black;">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

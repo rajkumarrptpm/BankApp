@@ -73,4 +73,39 @@ export class DataService {
             return false
         }
     }
+
+    deposit(acNo:any,amount:any,pin:any){
+        let db = this.database
+        if(acNo in db){
+            if(pin == db[acNo]["upiPin"]){
+                return db[acNo]['balance']+= +amount
+            }
+            else{
+                alert("Incorrect UPI pin")
+                return false
+            }
+        }
+        else{
+            alert("Invalid Account Number")
+            return false
+        }
+    }
+
+    withdraw(acNo:any,amount:any,pin:any){
+        let db=this.database
+        if(acNo in db){
+            if(pin == db[acNo]["upiPin"]){
+                return db[acNo]['balance']-= amount
+            }
+            else{
+                alert("Incorrect UPI pin")
+                return false
+            }
+        }
+        else{
+            alert("Invalid Account Number")
+            return false
+        }
+
+    }
 }
